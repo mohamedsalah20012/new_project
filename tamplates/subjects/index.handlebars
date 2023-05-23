@@ -1,15 +1,67 @@
-<h1>
-  subjects
-</h1>
-<div class="my-2">
-  <a href="/subjects/create">Add a new subject</a>
-</div>
-{{#each subjects}}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-  <div>
-    <a href="/subjects/{{_id}}">
-      {{name}}
-    </a>  
-      
-  </div>
-{{/each}}
+    <style>
+      body{ background-color: #F6FFDE; } .H1{ margin-left: 45%; margin-right:
+      45%; color: #AAC8A7; } a{ text-decoration: none; color: #AAC8A7;
+      font-size: 45px; } .my-2{ font-size: 30px; margin-left: 40%; margin-right:
+      40%; } .HH{ border: solid ; border-radius: 20px; border-color:
+      #AAC8A7;padding: 20px;} .my-2 button{ border-radius: 20px; border-color:
+      #AAC8A7; background-color: #F6FFDE;margin-left: -20px;margin-bottom:
+      30px;margin-top: 30px; }
+      {{! edit }}
+      .edit{ display: flex; justify-content:start; margin-top: 20px; } .edit
+      form{ margin-left: 20px; }
+    </style>
+
+  </head>
+  <body>
+    <div class="H1">
+      <h1>
+        subjects
+      </h1>
+    </div>
+
+    <div class="my-2">
+      <button class="btn btn-outline-secondary">
+        <a href="/subjects/create">addNewStudent</a>
+      </button>
+    </div>
+    <div class="HH">
+      {{#each subjects}}
+
+        <div class="d-flex justify-content-between">
+          <a class="name1" href="/subjects/{{_id}}">
+            {{name}}
+          </a>
+
+          <div class="edit">
+            {{!-- <a href="/subjects/{{_id}}/edit">
+              Edit
+            </a> --}}
+
+            {{! edit }}
+            <form action="/subjects/{{_id}}/edit">
+              <button
+                type="edit"
+                class="btn btn-outline-secondary"
+              >Edit</button>
+            </form>
+            {{!  }}
+
+            <form action="/subjects/{{_id}}?_method=DELETE" method="post">
+              <button
+                type="delete"
+                class="btn btn-outline-secondary"
+              >Delete</button>
+            </form>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </body>
+</html>

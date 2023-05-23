@@ -1,0 +1,20 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <button>
+      <a  href="/departments/add">
+
+        add department</a></button>
+
+    {{#each departments}}
+      <h1>{{name}}</h1>
+      <h1>{{code}}</h1>
+    {{/each}}
+  </body>
+</html>

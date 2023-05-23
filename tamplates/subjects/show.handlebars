@@ -1,13 +1,32 @@
-<h1>
-  {{subject.name}}
-</h1>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>body{ background-color: #F6FFDE; } h1,.code4,.depart4,.age4{ color:
+      #AAC8A7; margin-top: 40px; margin-bottom: 30px;} div{font-size: 30px; }
+    </style>
+  </head>
+  <body>
 
-<div>
-  Code:
-  {{subject.code}}
-</div>
+    <h1>
+      {{subject.name}}
+    </h1>
 
-<div>
-  Department:
-  {{subject.department.code}}
-</div>
+    <div class="code4">
+      Code:
+      {{subject.code}}
+    </div>
+
+    <div class="age4">
+      age:
+      {{subject.age}}
+    </div>
+
+    <div class="depart4">
+      Department:
+      {{subject.department.code}}
+    </div>
+  </body>
+</html>

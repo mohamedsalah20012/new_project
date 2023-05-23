@@ -6,47 +6,52 @@
     <title>Document</title>
     <style>
       body{ background-color: #F6FFDE; } h1,label{ color: #AAC8A7; } h1{
-      margin-top: 40px; margin-bottom: 30px; margin-left: 40%; margin-right:
-      40%; } #f3{ border: solid #AAC8A7;border-radius: 20px; padding: 20px; }
-      .name5,.code5,.age5,.depart5,.mt-3{margin: 30px;font-size: 30px;}
+      margin-top: 40px; margin-bottom: 30px; margin-left: 32%; margin-right:
+      32%; } #f4{ border: solid #AAC8A7;border-radius: 20px; padding: 20px; }
     </style>
   </head>
   <body>
-    <h1>createNewSubject</h1>
+    <h1>edit {{subject.name}}</h1>
 
-    <form id="f3" action="/subjects" method="POST">
+    <form id="f4" action="/subjects/{{subject._id}}?_method=PUT" method="POST">
       {{! Name }}
-      <div class="name5">
+      <div>
         <label for="">Name</label>
 
-        <input type="text" class="form-control" name="name" />
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          value="{{subject.name}}"
+        />
       </div>
       {{! Code }}
-      <div class="code5">
+      <div>
         <label for="">Code</label>
 
-        <input type="text" class="form-control" name="code" />
+        <input
+          type="text"
+          class="form-control"
+          name="code"
+          value="{{subject.code}}"
+        />
       </div>
-      {{! Age }}
-
+      <div>
+        <label for="">Age</label>
+        <input
+          type="text"
+          class="form-control"
+          name="age"
+          value="{{subject.age}}" required
+        />
+      </div>
       {{! Department }}
-      <div class="depart5">
+      <div>
         <label for="">Department</label>
 
         <select name="department" id="" class="form-select">
           {{#each departments}}
-
             <option value="{{_id}}">{{name}}</option>
-          {{/each}}
-        </select>
-      </div>
-      {{! doctor }}
-      <div class="doctor">
-        <label for="">Doctor</label>
-
-        <select name="doctorId" id="" class="form-select">
-          {{#each doctors}}
-            <option value="{{_id}}">{{username}}</option>
           {{/each}}
         </select>
       </div>
@@ -56,6 +61,5 @@
       </div>
 
     </form>
-
   </body>
 </html>

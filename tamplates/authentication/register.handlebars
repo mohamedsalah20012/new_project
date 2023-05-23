@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{ background-color: #F6FFDE; } h3{ color: #AAC8A7; margin-left:
+      40%;border: solid ; border-radius: 20px; border-color: #AAC8A7;padding:
+      15px;padding-left: 40px; margin-right: 40%; } #f1{ border: solid ;
+      border-radius: 20px; border-color: #AAC8A7;margin: 50px;}label{ color:
+      #AAC8A7; font-size: 40px;} div .name,.email,.age,.pass ,
+      #b,.userType{margin: 40px; }
+    </style>
+  </head>
+  <body>
+    <h3>Registration</h3>
+    <form id="f1" action="/register" method="post">
+      <div class="name">
+        <label for="">Username</label>
+        <input
+          type="text"
+          name="username"
+          class="form-control"
+          value="{{subject.name}}"
+        />
+      </div>
+      <div class="email">
+        <label for="">Email</label>
+        <input
+          type="email"
+          name="email"
+          class="form-control"
+          value="{{subject.name}}"
+        />
+      </div>
+      <div class="age">
+        <label for="">Age</label>
+        <input
+          type="text"
+          name="age"
+          class="form-control"
+          value="{{subject.age}}"
+        />
+      </div>
+      <div class="userType">
+        <label for="userType">User Type</label>
+        <select name="userType" id="userType" class="form-select">
+          <option value="Admin">Admin</option>
+          <option value="Doctor">Doctor</option>
+          <option value="Student">Student</option>
+        </select>
+      </div>
+      <div class="pass">
+        <label for="">Password</label>
+        <input
+          type="password"
+          name="password"
+          class="form-control"
+          value="{{subject.name}}"
+        />
+      </div>
+      <div>
+        <button
+          id="b"
+          type="submit"
+          class="btn btn-outline-secondary"
+        >register</button>
+      </div>
+    </form>
+  </body>
+</html>

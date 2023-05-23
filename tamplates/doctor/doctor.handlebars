@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  
+    {{#each subjects}}
+
+    <h3>
+      <a href="/doctors/upload/{{_id}}">
+      {{name}}
+      </a>
+    </h3>
+    <h4>
+{{code}}
+    </h4>
+    {{/each}}
+    <button class="btn btn-outline-secondary" title="show">show</button>
+  </body>
+</html>

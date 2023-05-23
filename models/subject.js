@@ -11,11 +11,21 @@ const subject = new Schema(
       type: String,
       required: false,
     },
+   
+    // userType: {
+    //   type: String,
+    //   required: true,
+    // },
     department: {
       type: Schema.Types.ObjectId,
       required: false,
       ref: "department",
     },
+    doctor:{
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: "user",
+    }
   },
   { timestamps: true }
 );

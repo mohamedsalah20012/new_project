@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{ background-color: #F6FFDE; } h3{ color: #AAC8A7; margin-left:
+      45%;border: solid ; border-radius: 20px; border-color: #AAC8A7;padding:
+      15px; margin-right: 45%; } #f2{ border: solid ; border-radius: 20px;
+      border-color: #AAC8A7;margin: 50px;}label{ color: #AAC8A7; font-size:
+      40px;} div .email1,.pass1 , #b1{margin: 40px; }
+    </style>
+  </head>
+  <body>
+    <h3>Login</h3>
+    <form id="f2" action="/login" method="post">
+      <div class="email1">
+        <label for="">Email</label>
+        <input
+          type="email"
+          name="email"
+          class="form-control"
+          value="{{subject.name}}"
+        />
+      </div>
+      <div class="pass1">
+        <label for="">Password</label>
+        <input
+          type="password"
+          name="password"
+          class="form-control"
+          value="{{subject.name}}"
+        />
+      </div>
+      <div>
+        <button
+          id="b1"
+          type="submit"
+          class="btn btn-outline-secondary"
+        >Login</button>
+        <button
+          id="b10"
+          type=""
+          class="btn btn-outline-secondary"
+        >Registration</button>
+      </div>
+    </form>
+  </body>
+</html>
