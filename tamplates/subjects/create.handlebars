@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body{ background-color: #F6FFDE; } h1,label{ color: #AAC8A7; } h1{
-      margin-top: 40px; margin-bottom: 30px; margin-left: 40%; margin-right:
-      40%; } #f3{ border: solid #AAC8A7;border-radius: 20px; padding: 20px; }
+      body{ background-color: #fefffc; } #f3
       .name5,.code5,.age5,.depart5,.mt-3{margin: 30px;font-size: 30px;}
     </style>
   </head>
@@ -19,13 +17,13 @@
       <div class="name5">
         <label for="">Name</label>
 
-        <input type="text" class="form-control" name="name" />
+        <input type="text"  name="name" />
       </div>
       {{! Code }}
       <div class="code5">
         <label for="">Code</label>
 
-        <input type="text" class="form-control" name="code" />
+        <input type="text" name="code" />
       </div>
       {{! Age }}
 
@@ -33,7 +31,7 @@
       <div class="depart5">
         <label for="">Department</label>
 
-        <select name="department" id="" class="form-select">
+        <select name="department" id="" >
           {{#each departments}}
 
             <option value="{{_id}}">{{name}}</option>
@@ -44,7 +42,7 @@
       <div class="doctor">
         <label for="">Doctor</label>
 
-        <select name="doctorId" id="" class="form-select">
+        <select name="doctorId" id="" >
           {{#each doctors}}
             <option value="{{_id}}">{{username}}</option>
           {{/each}}

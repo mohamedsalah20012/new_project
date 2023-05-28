@@ -35,10 +35,11 @@ export const login = async (req, res) => {
   const loggedUser = await user.findOne({ email });
 
   console.log(loggedUser);
-  const isCorrectPassword = bcrypt.compareSync(password, loggedUser?.password);
+  const isCorrectPassword = bcrypt.compare(password, loggedUser?.password);
   if (!isCorrectPassword) {
-    return res.redirect("/login");
+    return res.redirect("/subjects");
   }
+
   const data = {
     _id: loggedUser._id,
     email: loggedUser.email,
@@ -49,7 +50,7 @@ export const login = async (req, res) => {
   console.log(jwtToken);
 
   res.cookie("token", jwtToken);
-  res.cookie('_id',loggedUser._id)
+  res.cookie("_id", loggedUser._id);
 
   if (loggedUser?.userType == "Admin") {
     return res.redirect("/subjects");

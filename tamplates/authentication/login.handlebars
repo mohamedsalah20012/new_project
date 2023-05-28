@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -5,45 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body{ background-color: #F6FFDE; } h3{ color: #AAC8A7; margin-left:
-      45%;border: solid ; border-radius: 20px; border-color: #AAC8A7;padding:
-      15px; margin-right: 45%; } #f2{ border: solid ; border-radius: 20px;
-      border-color: #AAC8A7;margin: 50px;}label{ color: #AAC8A7; font-size:
-      40px;} div .email1,.pass1 , #b1{margin: 40px; }
+      body {
+        background-color: #1f2a3f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      h3 {
+        color: #7957ff;
+        text-align: center;
+        border: 2px solid #ffc857;
+        border-radius: 10px;
+        padding: 10px;
+        width: 300px;
+        margin-bottom: 20px;
+      }
+
+      #f2 {
+        border: 2px solid #ffc857;
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+      }
+
+      label {
+        color: #ffc857;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #aaa;
+        background-color: #f2f2f2;
+        color: #333;
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #ffc857;
+        color: #1f2a3f;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #e5b53d;
+      }
+
+      #b10 {
+        margin-top: 10px;
+        background-color: transparent;
+        color: #ffc857;
+        border: 2px solid #ffc857;
+      }
+
+      #b10:hover {
+        background-color: #ffc857;
+        color: #1f2a3f;
+      }
     </style>
   </head>
   <body>
     <h3>Login</h3>
     <form id="f2" action="/login" method="post">
       <div class="email1">
-        <label for="">Email</label>
+        <label for="email">Email</label>
         <input
           type="email"
           name="email"
-          class="form-control"
+          id="email"
           value="{{subject.name}}"
+          required
         />
       </div>
       <div class="pass1">
-        <label for="">Password</label>
+        <label for="password">Password</label>
         <input
           type="password"
           name="password"
-          class="form-control"
+          id="password"
           value="{{subject.name}}"
+          required
         />
       </div>
       <div>
-        <button
-          id="b1"
-          type="submit"
-          class="btn btn-outline-secondary"
-        >Login</button>
-        <button
-          id="b10"
-          type=""
-          class="btn btn-outline-secondary"
-        >Registration</button>
+        <button id="b1" type="submit">Login</button>
+        <button id="b10" type="">Registration</button>
       </div>
     </form>
   </body>
